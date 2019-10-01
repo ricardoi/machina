@@ -13,13 +13,13 @@ Contains:
 sudo xcode-select --install
 ```
 
-# Usage (Mac and Manjaro Linux)
+# Usage macOS 
 
 Following commands will clone the repository, install depenecies and make symbolic links.
 
 ```shell
 # clone this repo
-git clone git://github.com/mattocci27/dotfiles.git ~/dotfiles
+git clone git://github.com/ricardoi/machina ~/machina
 
 cd dotfiles
 
