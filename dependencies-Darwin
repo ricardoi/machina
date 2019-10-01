@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -e
+
+# command line tools
+#sudo xcode-select --install
+
+# homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+brew install mas
+brew install cask
+brew tap cjbassi/gotop
+
+brew bundle

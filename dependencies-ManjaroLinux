@@ -1,0 +1,122 @@
+#!/usr/bin/env bash
+set -e
+
+# Foundamental tools
+sudo pacman -Ssy
+
+sudo pacman -S base-devel wget
+
+echo "Installing yay..."
+if ! command -v "yay" >/dev/null 2>&1; then
+    cd $HOME
+    git clone https://aur.archlinux.org/yay.git
+    cd yay
+    makepkg -si
+    cd -
+fi
+
+echo "Installing Python dependencies..."
+yay -S --noconfirm python \
+  python-pip \
+  python-neovim
+
+yay -S gnome-online-accounts gnome-control-center
+
+echo "Installing tools..."
+yay -S --noconfirm xsel \
+  peco \
+  fzf \
+  zsh \
+  fish \
+  clang \
+  gcc-fortran \
+  gsl \
+  docker \
+  ghq-bin \
+  tmux \
+  tmux-mem-cpu-load \
+  ruby \
+  rubygems \
+  ruby-rdoc \
+  bluez-utils \
+  alacritty \
+  tree \
+  gotop \
+  yarn
+# for i3
+yay -S --noconfirm rofi \
+  compton-tryone-git \
+  i3lock \
+  i3blocks-gaps-git \
+  i3status-git \
+  xorg-xbacklight \
+  dunst \
+  volumeicon \
+  cava
+# for shadowsocks
+yay -S --noconfirm shadowsocks-libev \
+  shadowsocks-qt5 
+# for ranger
+yay -S --noconfirm w3m \
+  ffmpegthumbnailer \
+  highlight \
+  lynx \
+  elinks \
+  python-pdftotext \
+  gsimplecal \
+  evolution-ews \
+  thunderbird \
+  gloobus-preview \
+  feh \
+  imagemagick \
+  openmpi \
+  openblas \
+  screenfetch \
+  neofetch \
+  polybar
+# other apps
+yay -S --noconfirm julia \
+  fontforge \
+  google-chrome \
+  brave \
+  apm \
+  atom \
+  gitkraken \
+  expressvpn \
+  albert \
+  blueman \
+  electronic-wechat \
+  nerd-fonts-git \
+  enpass-bin \
+  zotero \
+  discord \
+  spotify \
+  visual-studio-code-bin
+
+echo "Installing Japanese..."
+yay -S --noconfirm fcitx-mozc \
+  fcitx-im \
+  fcitx-configtool
+
+echo "Installing Dropbox..."
+yay -S --mflags --skipinteg --noconfirm dropbox \
+  nautilus-dropbox
+
+echo "Installing Latex..."
+yay -S --noconfirm texlive-langjapanese \
+  texlive-langchinese \
+  ghostscript \
+  evince \
+  poppler-data \
+  pandoc \
+  pandoc-citeproc \
+  pandoc-crossref \
+  texlive-most
+
+echo "Installing fonts..."
+#yay -S --noconfirm otf-ipaexfont \
+yay -S --noconfirm awesome-terminal-fonts \
+  ttf-font-awesome
+
+echo "Installing R depenencies..."
+yay -S --noconfirm r
