@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-DOT_DIRECTORY="${HOME}/dotfiles"
+DOT_DIRECTORY="${HOME}/Programs"
 
 usage() {
   name=`basename $0`
