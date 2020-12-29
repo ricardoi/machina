@@ -33,4 +33,4 @@ sh setup.sh
 # executing R installation with packages for: Virome Community Ecology and Evolution
 sh Rpkg.sh install
 ```
-< Rpkg.sh executes Rpkgs.r that reads the Rpkgs_list [list updated December 2020](https://github.com/ricardoi/machina/blob/master/Rpkgs_list) >
+> Rpkg.sh executes Rpkgs.r that reads the Rpkgs_list [list updated December 2020](https://github.com/ricardoi/machina/blob/master/Rpkgs_list)
